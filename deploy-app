@@ -1,0 +1,13 @@
+#!/bin/bash
+# Copies the code of this project to the production web server.
+DEV_PATH="/home/herm/development/randompublishing/lib/randompublishing"
+LIB_PATH="/usr/lib/cgi-bin/lib/ruby"
+echo --------------------------------------------------------------------------
+echo
+echo Publishing the Ruby code
+echo in ${DEV_PATH}
+echo to ${LIB_PATH}
+rsync -v -t ${DEV_PATH}/* ${LIB_PATH}/
+echo
+echo --------------------------------------------------------------------------
+
